@@ -23,6 +23,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tinymediamanager.scraper.anidb.AniDBMetadataProvider;
+import org.tinymediamanager.scraper.douban.DoubanMetadataProvider;
 import org.tinymediamanager.scraper.fanarttv.FanartTvMetadataProvider;
 import org.tinymediamanager.scraper.hdtrailersnet.HDTrailersNetTrailerProvider;
 import org.tinymediamanager.scraper.imdb.ImdbMetadataProvider;
@@ -73,6 +74,7 @@ public class MediaProviders {
     loadProvider(KodiMetadataProvider.class);
     loadProvider(TraktMetadataProvider.class);
     loadProvider(UniversalMovieMetadataProvider.class);
+    loadProvider(DoubanMetadataProvider.class);
 
     // register all compatible scrapers in the universal scraper
     MEDIA_PROVIDERS.forEach((key, value) -> UniversalMovieMetadataProvider.addProvider(value));
